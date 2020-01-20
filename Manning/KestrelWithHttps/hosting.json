@@ -1,6 +1,0 @@
-{
-  "KestrelAddress": "127.0.0.1",
-  "KestrelPort": 5003,
-  "CertificateFileName": "localhost.pfx",
-  "CertificatePassword": "testpassword"
-}
