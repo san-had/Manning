@@ -1,7 +1,7 @@
 ﻿{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:55950",
       "sslPort": 0
@@ -11,6 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -18,6 +19,7 @@
     "KestrelWithHttps": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "/api/values",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

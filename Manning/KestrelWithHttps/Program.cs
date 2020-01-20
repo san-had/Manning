@@ -23,6 +23,7 @@ namespace KestrelWithHttps
                  .Build();
 
             return WebHost.CreateDefaultBuilder(args)
+                //.UseKestrel()
                 .UseKestrel(options =>
                 {
                     options.Listen(IPAddress.Loopback, 5001);
@@ -31,14 +32,12 @@ namespace KestrelWithHttps
                         listenOptions.UseHttps("localhost.pfx", "testpassword");
                     });
 
-                    var address = IPAddress.Parse(hostingConfig["KestrelAddress"]);
-                    var port = int.Parse(hostingConfig["KestrelPort"]);
-                    var cert = hostingConfig["CertificateFileName"];
-                    var password = hostingConfig["CertificatePassword"];
-                    options.Listen(address, port, listenOptions =>
-                    {
-                        listenOptions.UseHttps(cert, password);
-                    });
+                    var address = IPAddress.Parse(hostingConfig["KestrelAddress"]); var port =
+                    int.Parse(hostingConfig["KestrelPort"]); var cert =
+                    hostingConfig["CertificateFileName"]; var password =
+                    hostingConfig["CertificatePassword"]; options.Listen(address, port, listenOptions
+                    =>
+                    { listenOptions.UseHttps(cert, password); });
 
                     var certificateFromStore = GetSslCertificate();
                     if (certificateFromStore != null)

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KestrelWithHttps.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     public class ValuesContoller : Controller
     {
         // GET api/values
